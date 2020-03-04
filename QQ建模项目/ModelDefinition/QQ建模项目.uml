@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d6b51f4a-cc94-4f89-aef1-5c885e051ba6"
+  name="QQ建模项目" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="c00e5559-23e7-4b41-9b13-ec83fe35da47"
+        name="UI"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="cf50772f-b76d-480e-a972-f882ad36b77f"
+            isDerived="false"
+            sourceEndRoleName="UI"
+            targetEndRoleName="IKernel"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="7e9934b7-c784-43c3-a499-145c8d38fc7b"
+              LastKnownName="IKernel"
+              LastKnownLocation="QQ建模项目.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="14c293c7-4b82-478b-976c-dd595ab42fb0"
+                  name="UI"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a21419c-f343-4fdb-b6ce-1130ee873b69"
+                  name="IKernel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="ade3201c-2c90-4a7a-91d4-38d2391728fd"
+            name="IKernel *;"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="74416e46-3388-4518-a56f-e3e2debcf2ed"
+        name="INet"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="675d6391-98cf-4774-9b7a-4f42493abb62"
+            name="virtual bool InitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f9bd8cb5-23ae-4966-bb1f-6220fa977eb6"
+            name="virtual void UnInitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="12ad9721-e602-4c3e-98a5-ed9bca95a17e"
+            name="virtual bool SendData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="89fd379d-b6c8-4b56-a849-112152105ede"
+            name="virtual bool RecvData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="72b2a0c7-a60c-4527-97fd-443ba68f7317"
+        name="UDP"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="1576159f-2510-4888-ac1c-24f9090efb96">
+            <interfaceMoniker
+              Id="74416e46-3388-4518-a56f-e3e2debcf2ed"
+              LastKnownName="INet"
+              LastKnownLocation="QQ建模项目.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a06cde21-83e3-4fc5-b8d3-164f2c574ab0"
+            name="virtual bool InitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="667e9967-1978-4d6f-b2cd-623f24a081b7"
+            name="virtual void UnInitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e2e6bf47-2226-4be3-a633-ac68d948a10d"
+            name="virtual bool SendData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8e275b13-54ff-4025-94bb-a045543b8cdb"
+            name="virtual bool RecvData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6bf54b23-8b58-4fd7-a4c4-8be733bcbbb9"
+        name="TCP"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="8227a459-8a2f-4c3f-948a-8651971e275b">
+            <interfaceMoniker
+              Id="74416e46-3388-4518-a56f-e3e2debcf2ed"
+              LastKnownName="INet"
+              LastKnownLocation="QQ建模项目.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a229e980-1dff-47cb-a39c-29e26f2dd240"
+            name="virtual bool InitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="aa5b22c5-29ce-4cd4-8137-deaf10b44c5b"
+            name="virtual void UnInitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e0bd8ebf-bf0c-4973-adfb-4f77fd8d7b94"
+            name="virtual bool SendData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c40a2d1c-a457-44db-acfd-55f3669b84f5"
+            name="virtual bool RecvData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7e9934b7-c784-43c3-a499-145c8d38fc7b"
+        name="IKernel"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="1034a977-a152-4ed1-8019-7ebde5e51c81"
+            name="INet *;"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="b58faa72-a789-458e-a703-b6815872bb60"
+            name="virtual bool Open"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="06e8a3e8-0bef-4db5-9567-bb6dd65b3c60"
+            name="virtual bool Close"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9d788236-01a8-4bcc-aaf5-258e18b7cdd4"
+            name="virtual bool SendData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9b948641-4a5d-427a-841d-353efcf6b5f4"
+            name="virtual bool DealData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f7433810-0799-48f7-a322-c7adc0cb90d1"
+        name="TCPKernel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="74131e54-31be-4526-8f5b-9d0f6b74c6d7">
+            <interfaceMoniker
+              Id="7e9934b7-c784-43c3-a499-145c8d38fc7b"
+              LastKnownName="IKernel"
+              LastKnownLocation="QQ建模项目.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="38fe0e56-403e-43c0-84bb-80b4559bf2f4"
+            isDerived="false"
+            sourceEndRoleName="TCPKernel"
+            targetEndRoleName="INet"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="74416e46-3388-4518-a56f-e3e2debcf2ed"
+              LastKnownName="INet"
+              LastKnownLocation="QQ建模项目.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fcb4bdee-4258-4599-beae-16a6cd1a3fcf"
+                  name="TCPKernel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="117a3a2b-6d75-4720-8b38-05c985bf3022"
+                  name="INet"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="09768bea-5d4a-416f-bab8-292a2ecdc6cd"
+            name="virtual bool Open"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1e9bb2e1-b620-4c1f-a319-c447b2cda1e8"
+            name="virtual bool Close"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="baa76731-2599-4608-86da-7b80976858d9"
+            name="virtual bool SendData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b262a961-2d48-4265-b069-6fbeaf2c5d9e"
+            name="virtual bool DealData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1d74efe7-ad5f-41b6-b43a-e23fc9286fe5"
+        name="UDPKernel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6373cd23-68cd-4613-b7f4-0c687b86edf2">
+            <interfaceMoniker
+              Id="7e9934b7-c784-43c3-a499-145c8d38fc7b"
+              LastKnownName="IKernel"
+              LastKnownLocation="QQ建模项目.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="22e6a549-f58c-4a92-99b7-013aee06f5b8"
+            isDerived="false"
+            sourceEndRoleName="UDPKernel"
+            targetEndRoleName="INet"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="74416e46-3388-4518-a56f-e3e2debcf2ed"
+              LastKnownName="INet"
+              LastKnownLocation="QQ建模项目.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4b551b99-e7b3-4a50-b770-bdac4e68fc48"
+                  name="UDPKernel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7395b689-b567-45a5-9d68-caac3ef9a276"
+                  name="INet"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="824b5e64-6e85-4eea-830c-cfdef9159030"
+            name="virtual bool Open"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="97f2f46d-c22b-48a8-9867-f4d25f46c5e8"
+            name="virtual bool Close"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9dd80a69-e549-4427-8f3e-024f440ea1a9"
+            name="virtual bool SendData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7729a3de-1be9-4ec8-99fe-6cbbcac6a580"
+            name="virtual bool DealData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
